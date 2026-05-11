@@ -1,3 +1,5 @@
+//Question
+//Given a rows x cols binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
 class Solution {
     public int maximalRectangle(char[][] matrix) {
         int m = matrix.length;
@@ -32,3 +34,9 @@ class Solution {
         return maxi;
     }
 }
+// Approach : 
+// 1. For every row in the matrix we record its current no of consectuive 1's from it's left and store it in the array arr. 
+// 2. We perform dp on every column seperately. For every cell in that column we have two choices: 
+//      i) Start a new rectangle 
+//      ii) Continue with the rectangle from beginning for this we assume width as the min prefix among all the cells traversed in the column so far.
+// 3. Finally we take the max value of final dp (0th row) among all the columns 
