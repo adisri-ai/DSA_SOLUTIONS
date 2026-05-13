@@ -41,4 +41,4 @@ class Solution {
 // We store all the values of a sum of nums[i]+nums[n-1-i] in a hashmap. This will be used later for performing calculations  
 // The prefix and suffix arrays stores the number of such pairs where the operation needs to be performed on both the numers 
 // Total operations for a number = (prefix[i]+suffix[i])*2 operations  + (n - no of pairs where one operations is needed)*1 
-// No. of pairs where only one operation is needed = n - pre[i] - suf[i] - m[i]
+// No. of pairs where only one operation is needed = n - pre[i] - suf[i] - m.get(i)
