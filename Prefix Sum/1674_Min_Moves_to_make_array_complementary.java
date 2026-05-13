@@ -1,3 +1,10 @@
+// Question
+//You are given an integer array nums of even length n and an integer limit. 
+//In one move, you can replace any integer from nums with another integer between 1 and limit, inclusive.
+//The array nums is complementary if for all indices i (0-indexed), nums[i] + nums[n - 1 - i] 
+// equals the same number. For example, the array [1,2,3,4] is complementary
+//because for all indices i, nums[i] + nums[n - 1 - i] = 5
+//Return the minimum number of moves required to make nums complementary.
 class Solution {
     public int minMoves(int[] nums, int limit) {
         int start = 0;
@@ -30,3 +37,8 @@ class Solution {
         return ans;
     }
 }
+// Explanation
+// We store all the values of a sum of nums[i]+nums[n-1-i] in a hashmap. This will be used later for performing calculations  
+// The prefix and suffix arrays stores the number of such pairs where the operation needs to be performed on both the numers 
+// Total operations for a number = (prefix[i]+suffix[i])*2 operations  + (n - no of pairs where one operations is needed)*1 
+// No. of pairs where only one operation is needed = n - pre[i] - suf[i] - m[i]
