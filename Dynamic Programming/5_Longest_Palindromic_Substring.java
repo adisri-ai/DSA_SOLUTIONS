@@ -1,4 +1,5 @@
-
+// Question
+//Given a string s, return the longest palindromic substring in s.
 class Solution {
     public String longestPalindrome(String s) {
         int n = s.length();
@@ -33,3 +34,10 @@ class Solution {
         return s.substring(f , se+1);
     }
 }
+// Explanation
+// Here is the recursive approach which was later converted to tabulated form
+// 1. We start with two pointers i and j. 
+// 2. If s[i] == s[j], we do the following: 
+//    a. First choice: Check if the substring between them is palindrome recurisvely or if the the characters are adjacent
+//                     or if there is only one character in between then we take this substring length as choice1 else choice1 becomes 0
+//    b. Second Chouice: Leave this pair, Either increment i or decrement j and check for the largest palindrome recursively 
