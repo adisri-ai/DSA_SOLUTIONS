@@ -1,5 +1,19 @@
 // Question
 //Given a string s, return the longest palindromic substring in s.
+string find(int i , int j , string& s){
+        if(i==j) {
+            if(ans=="") ans = s[i];
+            return;
+        }
+        if(s[i]!=s[j]){find(i+1 , j , s) ; find(i , j-1 , s); return;}
+        int p=i ; int q = j;
+        while(p<=q){
+            if(s[p]!=s[q]) {find(i+1 , j , s); find(i , j-1 , s); return;}
+            p++;
+            q--;
+        }
+        if(j-i+1 > ans.length())ans = s.substr(i , j-i+1);
+    }
 class Solution {
     public String longestPalindrome(String s) {
         int n = s.length();
