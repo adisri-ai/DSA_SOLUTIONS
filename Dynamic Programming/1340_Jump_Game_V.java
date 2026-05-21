@@ -34,3 +34,7 @@ class Solution {
         return ans;
     }
 }
+// Explanation
+// 1. Since there is no specific order in which cells couild be accessed, we make use of memoizaiton rather than tabulation. 
+// 2. For every i iterate acorss neightbouring cells as long as the sequence is stricly decrasing 
+// 3. We recursively apply the "find" function functions and finally take the maximum value. 
