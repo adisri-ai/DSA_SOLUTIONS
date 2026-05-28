@@ -1,5 +1,10 @@
 // Question  
 //Given an integer array nums, return the maximum result of nums[i] XOR nums[j], where 0 <= i <= j < n.
+// Explanation: 
+// To maximize XOR starting from the most significant bit we try to make a number having 
+// different bits as much as possible greedily for a given number 
+// Hence here we iterate through the entire array and for each element try to find the 
+// maximum possible XOR by traversing the Trie for every element and store the maximum answer obtained so far in a variable. 
 class Node {
 
     Node[] arr;
