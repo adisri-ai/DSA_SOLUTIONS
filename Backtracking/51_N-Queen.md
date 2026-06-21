@@ -1,8 +1,15 @@
-// Question
-//Question 
-//The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
-//Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.
-//Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
+# Question 
+```
+    The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
+    Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.
+    Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
+```
+# Approach  
+1. At any point we keep track of the queens present for each diagnoal, row and column.
+2. If there is no legal square remaining and all the queens are not place yet we backtrack.
+3. At any point we check for all the available squares recursively.
+# Code 
+```
 class Solution {
 public:
     void solve(int i,vector<string>& v,int& n,vector<bool>& cols,vector<bool>& dia,vector<bool>& dia2,vector<vector<string>>& ans){
