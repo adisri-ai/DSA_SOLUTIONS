@@ -1,3 +1,13 @@
+# Question   
+```
+    Construct a Binary Tree given the sequence of it's preorder and inorder traversal. Return the root of the constructed tree.
+```
+# Approach  
+1. We maintain a static index to traverse across the preorder sequentially.
+2. Every node to the left of the location of the current preorder node in the inorder array will be to it's left while others would be to the right.
+3. We recursively call the function to get the root of the left and right subtrees.
+# Code (in Java)
+```
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
