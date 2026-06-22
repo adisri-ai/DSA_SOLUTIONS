@@ -1,6 +1,16 @@
-//Question
-//Given a string s that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid.
-//Return a list of unique strings that are valid with the minimum number of removals. You may return the answer in any order.
+# Question  
+```
+    Given a string s that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid.
+    Return a list of unique strings that are valid with the minimum number of removals. You may return the answer in any order.
+```
+# Approach  
+```
+    1.For every string we eliminate one character either '(' or ')' if there is no answer found or if the length of the string is greater than the length of the ans
+    2.We perform BFS traversal using queue and upon finding a valid string when there was no ans found or if the length of ans was equal to the length of the string
+    3.we add it to the set. Finally, we add all the elements of the set to the string.
+```
+# Code 
+```
 class Solution {
     public boolean check(String s){
         int curr = 0;
@@ -48,7 +58,3 @@ class Solution {
         return final_ans;
     }
 }
-// Explanation 
-// For every string we eliminate one character either '(' or ')' if there is no answer found or if the length of the string is greater than the length of the ans
-// We perform BFS traversal using queue and upon finding a valid string when there was no ans found or if the length of ans was equal to the length of the string
-// we add it to the set. Finally, we add all the elements of the set to the string.
