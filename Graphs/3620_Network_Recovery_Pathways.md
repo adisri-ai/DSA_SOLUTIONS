@@ -12,6 +12,17 @@ For each valid path, define its score as the minimum edge‑cost along that path
 
 Return the maximum path score (i.e., the largest minimum-edge cost) among all valid paths. If no valid path exists, return -1.
 ```
+# Constraints  
+```
+2 <= n <= 1e5
+1 <= roads.length <= 1e5
+roads[i].length == 3
+1 <= ai, bi <= n
+ai != bi
+1 <= distancei <= 1e4
+There are no repeated edges.
+There is at least one path between 1 and n.
+```
 # Approach  
 1. We perform binary search on ```minimum edge threshold``` from 1 to maximum edge length in the graph.
 2. For each `threshold` we perform topological sort traversal to check if the path is possible since the graph is a DAG.
