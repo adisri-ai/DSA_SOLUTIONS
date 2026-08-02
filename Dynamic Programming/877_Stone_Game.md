@@ -19,7 +19,7 @@ sum(piles[i]) is odd.
 1. We use the `Minmax` method implemented using `Dynamic Programming` for this question.
 2. We recursively find the best outcome for each player at their turn at finally tabulate it.
 3. The state in the `dp` array is defined as `dp[i][j][k]` where `i` is the front pointer, `j` is the end pointer and `k` is the flag.
-# Code  
+# Code(in C++)  
 ```
 class Solution {
 public:
